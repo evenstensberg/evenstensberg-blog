@@ -1,1 +1,32 @@
-runtime: nodejs18
+runtime: nodejs20
+
+handlers:
+  - url: /(.*\.css)
+    mime_type: text/css
+    static_files: public/\1
+    upload: public/css/(.*\.css)
+
+  - url: /(.*\.html)
+    mime_type: text/html
+    static_files: public/\1
+    upload: public/(.*\.html)
+
+  - url: /(.*\.js)
+    mime_type: text/javascript
+    static_files: public/\1
+    upload: public/(.*\.js)
+
+  # image files
+  - url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+    static_files: public/\1
+    upload: public/img/(.*\.(bmp|gif|ico|jpeg|jpg|png))
+
+  # index files
+  - url: /(.+)/
+    static_files: public/\1/index.html
+    upload: public/(.+)/index.html
+
+  # site root
+  - url: /
+    static_files: public/index.html
+    upload: public/index.html

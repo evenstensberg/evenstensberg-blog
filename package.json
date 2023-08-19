@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "node index.js",
+    "start": "node app.js",
     "deploy:public": "gcloud app deploy"
   },
   "hexo": {
