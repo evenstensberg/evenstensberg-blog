@@ -1,0 +1,3 @@
+[submodule "flisa-mat-dataset"]
+	path = flisa-mat-dataset
+	url = git@github.com:evenstensberg/flisa-mat-dataset.git

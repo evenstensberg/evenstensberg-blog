@@ -8,13 +8,15 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "start": "node app.js",
-    "deploy:public": "gcloud app deploy"
+    "deploy:public": "gcloud app deploy",
+    "api:generate": "sh ./generate-data.sh"
   },
   "hexo": {
     "version": "5.4.2"
   },
   "dependencies": {
     "express": "^4.17.1",
+    "express-rate-limit": "^7.1.3",
     "hexo": "^5.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
