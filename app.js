@@ -10,7 +10,7 @@ const resturants = require("./data/resturants_flisa.json");
 
 
 
-app.get('/api/healthcheck', (req, res) => {
+app.get('/api/healthcheck', rateLimitMiddleware, (req, res) => {
   res.sendStatus(200)
 })
 
